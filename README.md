@@ -38,8 +38,8 @@
 
 1. リポジトリのクローン
 ```bash
-git clone [リポジトリURL]
-cd [プロジェクト名]
+git clone https://github.com/KamineHiro/enPiT2024.git
+cd stay_up_all_night
 ```
 
 2. バックエンドのセットアップ
