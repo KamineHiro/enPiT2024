@@ -11,6 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
     - name: Check out repository
@@ -32,6 +33,6 @@ jobs:
 
     - name: Run tests
       run: |
-        docker-compose exec -T frontend npm test
+        docker-compose exec -T -e CI=true frontend npm test -- --watchAll=false
         docker-compose exec -T backend pytest
 
